@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Images</title>
+    <script languaje="javascript"> 
+     
+        images=["img/im2.jpg"]
+        vuelta=0
+
+        function adelante(){
+            vuelta++
+            cambioImagen=document.getElementById('carrusel')
+            if(vuelta >=(images.length))
+            vuelta=0
+            cambioImagen.src=images[vuelta]
+			document.r1.resu.value = 'sadasdas';
+			
+        } //cierre funcion adelante
+
+        function atras (){
+            vuelta--
+            cambioImagen=document.getElementById('carrusel')
+
+            if(vuelta < 0)
+                vuelta= (images.length) - 1
+                    cambioImagen.src=images[vuelta];
+            //cierre funcion atras 
+			
+			
+			
+        }
+    </script>
+</head>
+<body>
+    <center>
+		<form  name=r1>
+        
+        <h1>Plantas para exteriores</h1>
+		<h2>Aca encontraras semillas de todo tipo</h2>
+    <center>
+	
+		<table id=""width=80% height=90% border=6 cellpadding=5 cellspacing=6 bordercolor=#0F5227 class=tab>
+           
+
+		
+			
+		<tr>	
+			<th width="30%">
+				<img src="img/im14.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>	
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Hiedra</h2>
+				<h2>Precio: $ 50.000</h2>
+				<p align=justify>
+				La hiedra es una de las pocas plantas que procede de Europa y que pueden cultivarse en interior. No hay muchas variedades de hiedra y sólo dos, la Hedera Helix, 
+				(hiedra común) y la Canariensis o hiedra canaria, son indicadas para cultivar en interior. Esta planta pertenece a la familia de las araliáceas y crece en toda 
+				Europa. Las hojas son de color verde oscuro, pecioladas y alternas, con formas desde ovaladas o elípticas cerca del racimo, hasta triangulares y con 3 ó 5 lóbulos.
+				<span style="color: red;"> <br>
+				Tamaño: 40 cm<br>
+				edad: 6 meses<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+				<input type=submit value="Lo quiero, añadir al carrito">
+			</th>	
+		</tr>	
+		
+		
+		<tr>
+			<th width="30%">
+				<img src="img/im15.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>	
+		
+		
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Geranios</h2>
+				<h2>Precio: $ 55.000</h2>
+				<p align=justify>
+				Los geranios son plantas de exterior con flores de colores vivos. Florecen durante el verano y son bastante resistentes.
+				Se suelen cultivar en el jardín, en la terraza o el balcón pero también se pueden mantener en interior, siempre y cuando se coloque en un lugar muy luminoso 
+				alejados de la calefacción.
+				
+				El geranio puede soportar temperaturas de hasta 30º pero no resiste el frío (menos de 10º) ni las heladas, por eso, es conveniente protegerlos en invierno.
+				En primavera y verano hay que regar los geranios con frecuencia, al menos dos veces por semana, mientras que en otoño basta con un riego semanal.
+
+				Durante el invierno, casi no necesitan agua. Es importante evitar los encharcamientos.
+				<span style="color: red;"> <br>
+				Tamaño: 20 cm<br>
+				edad: 5 meses<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+			</th>	
+		</tr>
+		
+		
+		<tr>
+			<th width="30%">
+				<img src="img/im16.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>
+			
+		
+		
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Buganvilla</h2>
+				<h2>Precio: $ 53.000</h2>
+				<p align=justify>
+				Curiosamente, la Buganvilla es una planta que se adapta bien incluso a los climas marcados por veranos calurosos e inviernos fríos. A pesar de que su procedencia 
+				es puramente tropical (es originaria de Brasil), lo cierto es que podemos disfrutar de este arbusto con flor de un año a otro si sabemos resguardarlo de uno de sus
+				principales enemigos: la bajada de temperaturas nocturna propia de los meses duros de invierno.
+				<span style="color: red;"> <br>
+				Tamaño: 20 cm<br>
+				edad: 1 año<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+			</th>
+		</tr>	
+		
+		<tr>
+			<th width="30%">
+				<img src="img/im17.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>
+			
+		
+		
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Lavanada</h2>
+				<h2>Precio: $ 15.000</h2>
+				<p align=justify>
+				La Lavanda es una de las plantas aromáticas por excelencia, perfecta para tener en casa. Los cuidados de la lavanda no son demasiado complicados; y no solo nos 
+				proporcionan el placer de disfrutar de la belleza natural de esta planta sino, además, su mayor virtud: su peculiar e irresistible perfume. Se trata de un aroma
+				que huele a verano, a naturaleza y a fuente de remedio medicinal natural.
+				<span style="color: red;"> <br>
+				Tamaño: 45 cm<br>
+				edad: 5 meses<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+			</th>
+		</tr>	
+		
+		
+		
+		<tr>
+			<th width="30%">
+				<img src="img/im18.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>
+			
+		
+		
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Rosal</h2>
+				<h2>Precio: $ 50.000</h2>
+				<p align=justify>
+				Dentro de los rosales existe todo un mundo de posibilidades, pero si quieres dejar a todos con la boca abierta, elige un rosal trepador para darle vida a tu 
+				patio o jardín. Puedes utilizarlo para decorar una pérgola o para cubrir parte de la pared (llegan a alcanzar más de 2 metros de altura). Además, los rosales son 
+				plantas que florecen todo el año, lo que significa que tendrás un jardín de ensueño los 365 días. ¿Alguien da más?
+				<span style="color: red;"> <br>
+				Tamaño: 1.20m<br>
+				edad: 1 año<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+			</th>
+		</tr>	
+		
+		<tr>
+			<th width="30%">
+				<img src="img/im19.jpg" width="200" height="300" id="carrusel"/><br>
+			</th>
+			
+		
+		
+			<th>
+				<div style="color: black;" id="texto">
+				<h2>Helechos</h2>
+				<h2>Precio: $ 45.000</h2>
+				<p align=justify>
+				Los helechos, aparte de ser superfáciles de mantener y muy resistentes, son el complemento ideal de cualquier jardín. Para que crezcan sanos, 
+				debes situarlos en zonas con semisombra, sin sol directo. También adoran la humedad (sin riegos excesivos, ya que estos podrían pudrir sus raíces).
+				<span style="color: red;"> <br>
+				Tamaño: 1.50 m<br>
+				edad: 10 meses<br>
+				envios: envios a bogota y soacha<br>
+				incluye matera <br>
+				envio de 2 a 3 dias 
+				</span>
+				</p>
+				</div>
+			</th>
+		</tr>	
+		</table>	
+			
+
+			
+		<br>
+	
+		<br>
+		
+	</form>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>Registro</title>
+		<link rel="stylesheet" href="Estilos/style.css">
+		<link rel="icon" type="image/x-icon" href="Favicon/favicon.png">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript">
+	
+	//registro
+	usreg = " "
+	coreg = " "
+
+	//usuario
+	usuN = " "
+	conN = " "
+	
+	usuN2 = "greenad"
+	conN2 = "1231"
+	
+	usuN3 = "greensup"
+	conN3 = "123"
+
+	usuN4 = "leonos1"
+	conN4 = "1234"
+	
+	
+	function mostrarlogin() {
+            document.getElementById("login").style.display = "table";
+            document.getElementById("Registro").style.display = "none";
+			
+        }
+
+    function mostraRegistro() {
+            document.getElementById("Registro").style.display = "table";
+            document.getElementById("login").style.display = "none";
+        }
+
+
+	function validar() {
+        if (document.f2.nom.value.length == 0) {
+            swal('NOMBRE FALTANTE','Por favor digite el nombre','error')
+            document.f2.nom.focus()
+            return 0
+            }
+
+            nom = document.f2.nom.value
+
+            if (document.f2.ape.value.length == 0) {
+                swal('APELLIDO FALTANTE','Por favor digite el apellido','error')
+                document.f2.ape.focus()
+                return 0
+            }
+
+            ape = document.f2.ape.value
+
+            if (document.f2.email.value.length == 0) {
+                swal('CORREO FALTANTE','Por favor ingrese su correo','error')
+                document.f2.email.focus()
+                return 0
+            }
+
+            email = document.f2.email.value
+
+            if (document.f2.us.value.length == 0) {
+                swal('Cree su usuario')
+                document.f2.us.focus()
+                return 0
+            }
+
+            usreg = document.f2.us.value
+
+            if (document.f2.pas.value.length == 0) {
+                swal('Ingrese su contraseña')
+                document.f2.pas.focus()
+                return 0
+            }
+
+            coreg = document.f2.pas.value
+
+            console.log('Datos de Usuario:',usreg,coreg)
+
+            alert("Registro exitoso")
+
+        }
+
+    function validar2() {
+
+		if (document.f1.usu.value.length == 0) {
+			swal("Por favor digite usuario")
+			document.f1.usu.focus()
+			return 0
+			}
+
+			usuN = document.f1.usu.value
+
+		if (document.f1.con.value.length == 0) {
+			swal("Por favor digite la contraseña")
+			document.f1.con.focus()
+			return 0
+			}
+
+			conN = document.f1.con.value	
+		
+		
+
+        if ((usreg == usuN && coreg == conN) || (usuN == usuN2 && conN == conN2) || (usuN == usuN3 && conN == conN3) || (usuN == usuN4 && conN == conN4)) {
+            swal('Bienvenido')
+            document.f1.submit()
+          	}
+
+          	if (usuN != usreg) {
+              	swal('Usuario incorrecto')
+               	document.f1.usu.focus()
+               	return 0
+               	}
+
+                if (conN != coreg){
+            		swal("Clave errada")
+            		document.f1.con.focus()
+            		return 0
+            		}
+
+    	}//cierre funcion validar2		
+		
+	</script>    
+		
+	</head>
+	<body>	
+		<br>
+		<a name="ingreso">
+		<form name="f1" action=GreenHome.html>
+		<table class="tableingreso" id="login" style="display:none;" border="0" cellspacing="0" bgcolor="#0F5227" bordercolor="#C0FFDB">
+			<tr>
+				<td colspan="2"><br><center><font class="flu2" face="arial" color="#C0FFDB" size="3"><b>Usuario:</font><br>
+					<center><input class="in" type="text" autofocus name="usu" size="13"><br><br>
+					<center><font class="flu2" face="arial" color="#C0FFDB" size="3" >Clave:</font><br>
+					<center><input class="in" type="password" maxlength="8" name="con" size="10"></center><br>
+				</td>
+			</tr>
+			<tr>			
+				<td><br>
+					<input class="in3" type="button" value="Registrarme" onclick="mostraRegistro()">
+				<td>&nbsp&nbsp&nbsp&nbsp<br>
+						
+					<input class="in3" type="button" name="pres" value="Ingresar" onclick="validar2 ()">
+					<a href="GreenHome.html">
+				</td>
+			<tr>	
+			<tr>	
+				<td colspan="2"><br>
+					<a href=restablecerContraseña.html><center class="olvido">¿Has olvidado la contraseña?</center>
+					
+					
+				</td>	
+			</tr>
+		</table>
+		</form>
+
+
+		<form name="f2">
+			<table width="100%" cellspacing="0" border="0">
+				<font face="arial"><center><font size="3" color="#0F5227"><b>PUBLICIDAD</font>
+			<br><br><br>
+			</table>
+			<table id="Registro" class="tablefor" bgcolor="#0F5227" border="0" align="center" bordercolor="black" width="50%" height=50% cellspacing="0">			
+				<tr><br>
+					<a href="GreenHome.html"><img class="logo1" src="image/logo.png" width="220px" height="190px"></a>
+					<img class="publicidad1" src="image/publicidadOK1.jpeg" width="891px" height="180px">
+				<tr>
+                	<th class="in" colspan="2"><font face="arial" size="5" color="#C0FFDB"><br>Formulario de Registro Rápido<br></th>
+	            </tr>
+	            <tr>
+	            	<th><br>
+	                	<font face="arial" color="#C0FFDB" placeholder="Nombre" size="3" title="Nombre" required>Nombres</th>
+	            	<th><br>
+	            		<input class="in" type="text" autofocus  name="nom" size="25"></th>
+	            </tr>
+	            <th>
+	                <font class="flu2" face="arial" color="#C0FFDB" size="3">Apellidos</th>
+	            <th><input class="in" type="text" name="ape"  size="25"></th>
+	            </tr>
+	            <th>
+	                <font class="flu2" face="arial" color="#C0FFDB" size="3">Ingrese su correo electrónico</th>
+	            <th><input class="in" type="email" name="email"size="25"></th>
+	            </tr>
+	            </tr>
+	            <th>
+	                <font class="flu2" face="arial" color="#C0FFDB" size="3">Cree su usuario</th>
+	            <th><input class="in" type="text" name="us" placeholder="Letras y Números" size="25"></th>
+	            </tr>
+	            <th>
+	                <font class="flu2" face="arial" color="#C0FFDB" size="3"> Ingrese su contraseña</th>
+	            	<th><input class="in" type="password" name="pas" placeholder="Máximo 8 carácteres" maxlength="8" size="20"></th>
+	            </tr>
+				<tr>
+					<th><br><font face="arial" color="#0e8300">
+					
+					<input class="in2" type="button" name="re" value="Acceder" size="17" onclick="mostrarlogin()"></th></form>
+				
+					<th><br><input class="in2" type="button" name="sm" onclick="validar()" value="¡Registrarme!">
+
+					</th>
+				</tr>
+			</table>
+		</form>
+		
+		
+	</body>
+</html>

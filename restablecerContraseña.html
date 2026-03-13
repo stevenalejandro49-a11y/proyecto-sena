@@ -1,0 +1,78 @@
+<html lang="es">
+	<head>
+		<title>Olivo de Clave</title>
+		<link rel="stylesheet" href="Estilos/style.css">
+		<link rel="icon" type="image/x-icon" href="Favicon/favicon.png">
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+		<link rel="stylesheet" href="Estilos/style.css">
+		<link rel="icon" type="image/x-icon" href="Favicon/favicon.png">
+    	
+
+		</script>
+	<script type="text/javascript">
+		function reestablecer(){
+            if(document.f1.email.value.length == 0) {
+            swal('CORREO FALTANTE','Por favor digite el correo','error')
+            document.f2.nom.focus()
+            return 0
+            }
+			
+			
+			document.getElementById("restablecer").style.display = "table";
+            document.getElementById("olvidar").style.display = "none";
+			
+			
+			
+        }
+		
+		
+	</script>
+	</head>
+	<body>
+		<form name="f1" ><br>
+		
+		<table class="publicidad" width="100%" cellspacing="0" border="0">
+		<center><font face="arial" size="2" color="#0F5227"><b>PUBLICIDAD</font>
+			<tr>
+				<a href="GreenHome.html"><img class="logo4" src="image/logo.png" width="200px" height="170px"></a>
+				<img class="publicidad4" src="image/publicidadOK1.jpeg" width="800px" height="160px">
+			<tr>
+		</table>
+		<br><br>
+		
+		<center><table id="olvidar" class="tableolv" bgcolor="#0F5227" border="0" align="center" bordercolor="black" width="35%" height=40% cellspacing="0"><br>
+				<tr>
+					<th>
+					<div style="color: black;" id="texto">
+					<h1><font face="'Poppins', sans-serif;" color="#C0FFDB" size="5"><br>¿Olvidaste tu contraseña?</font></h1><br>
+					
+					
+					<span style="color: blue;"><br>
+					<h2><font face="'Poppins', sans-serif;" color="#C0FFDB" size="3">Digita tu correo para reestablecer tu clave personal</h2>
+					</span><br>
+					<input class="in" type="email" name="email" placeholder="E-mail" size="25"><br><br>
+					
+					<input class="rest" type="button" value=" Restrablecer contraseña " size="40" onclick="reestablecer()">
+					<br>
+					
+					</div>
+					</th>
+				</tr>
+			</table>
+		</form>
+		<form name="f2" action="Registro.html">
+		<center>
+			<table id="restablecer" class="tableolv" style="display:none;" bgcolor="#0F5227" border="0" align="center" bordercolor="black" width="35%" height=40% cellspacing="0">	
+				<tr>
+					<th>
+					<div style="color: black;" id="texto">
+					<h1><font face="'Poppins', sans-serif;" color="#C0FFDB" size="3">Verifica tu bandeja de entrada o spam.<br>Recibiras un correo para restablecer tu cuenta</h1><br><br>
+						
+					<input class="rest" type=submit value="Volver a inicio de sesión"></th>
+					</div>
+					</th>
+				</tr>			
+			</table>
+		</form>
+	</body>
+</html>

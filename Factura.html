@@ -1,0 +1,454 @@
+<html lang="es">
+	<head>
+		<title>Factura</title>
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+		<link rel="stylesheet" href="Estilos/Style.css">
+		<link rel="icon" type="image/x-icon" href="Favicon/favicon.png">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+		<style type="text/css">
+		.tab{border-radius:5%}
+		
+		body{
+		background: linear-gradient(to right, #FFFFFF, #7FBFA9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+		}
+		</style>
+		
+		<script language="javascript">
+			
+			function hoy(){
+
+			var hoy = new Date();
+			var hour = hoy.getHours()
+			var min = hoy.getMinutes()
+			var secs = hoy.getSeconds()
+			compl = hoy.toLocaleTimeString()
+		 	
+			hora = ''+compl+''
+
+			//salida
+			document.getElementById('hoy').innerHTML = hora
+			}
+
+			window.onload = function() {
+			setInterval(hoy, 1000);
+			}
+
+			
+			function producto1(){
+				producto = localStorage.getItem("prod");
+				producto = JSON.parse(producto)	
+				document.r1.pro1.value	= (''+producto+'')
+			
+			
+				precio	 = localStorage.getItem("prec");
+				precio 	 = JSON.parse(precio)
+			
+				cantidad = localStorage.getItem("cant");
+				cantidad = JSON.parse(cantidad)
+		
+									
+											/*if(document.r1.nom.value.length==0){
+												swal('DATOS FALTANTES', 'Por favor digite el nombre, apellido, documento y telefono ','error');
+												document.r1.nom.focus()
+												return 0
+												}
+												
+													if(document.r1.ape.value.length==0){
+														swal('DATOS FALTANTES', 'Por favor digite el apellido, documento y telefono ','error');
+														document.r1.ape.focus()
+														return 0
+														}
+															if(document.r1.cel.value.length==0){
+																swal('DATOS FALTANTES', 'Por favor digite el documento y telefono ','error');
+																document.r1.cel.focus()
+																return 0
+																}
+					
+																	if(document.r1.tel.value.length==0){
+																		swal('DATOS FALTANTES', 'Por favor digite el telefono ','error');
+																		document.r1.tel.focus()
+																		return 0
+																		}
+												*/
+			}//fin fuction producto1
+			
+			
+			
+			
+			
+			
+			
+			function imprimir(){
+				producto = localStorage.getItem("prod");
+				producto = JSON.parse(producto)	
+				document.r1.pro1.value	= (''+producto+'')
+				
+				precio	 = localStorage.getItem("prec");
+				precio 	 = JSON.parse(precio)
+				document.r1.car1.value	= (''+precio+'')
+				
+				cantidad = localStorage.getItem("cant");
+				cantidad = JSON.parse(cantidad)
+				document.r1.can1.value	= (''+cantidad+'')
+				
+				
+				producto2 = localStorage.getItem("prod2");
+				producto2 = JSON.parse(producto2)	
+				document.r1.pro2.value	= (''+producto2+'')
+				
+				precio2	 = localStorage.getItem("prec2");
+				precio2	 = JSON.parse(precio2)
+				document.r1.car2.value	= (''+precio2+'')
+				
+				cantidad2 = localStorage.getItem("cant2");
+				cantidad2 = JSON.parse(cantidad2)
+				document.r1.can2.value	= (''+cantidad2+'')
+				
+				producto3 = localStorage.getItem("prod3");
+				producto3 = JSON.parse(producto3)	
+				document.r1.pro3.value	= (''+producto3+'')
+				
+				precio3	 = localStorage.getItem("prec3");
+				precio3	 = JSON.parse(precio3)
+				document.r1.car3.value	= (''+precio3+'')
+				
+				cantidad3 = localStorage.getItem("cant3");
+				cantidad3 = JSON.parse(cantidad3)
+				document.r1.can3.value	= (''+cantidad3+'')
+				
+				
+				producto4 = localStorage.getItem("prod4");
+				producto4 = JSON.parse(producto4)
+				document.r1.pro4.value	= (''+producto4+'')				
+				
+				precio4	 = localStorage.getItem("prec4");
+				precio4	 = JSON.parse(precio4)
+				document.r1.car4.value	= (''+precio4+'')
+				
+				cantidad4 = localStorage.getItem("cant4");
+				cantidad4 = JSON.parse(cantidad4)
+				document.r1.can4.value	= (''+cantidad4+'')
+				
+				
+				producto5 = localStorage.getItem("prod5");
+				producto5 = JSON.parse(producto5)	
+				document.r1.pro5.value	= (''+producto5+'')	
+				
+				precio5	 = localStorage.getItem("prec5");
+				precio5	 = JSON.parse(precio5)
+				document.r1.car5.value	= (''+precio5+'')
+				
+				cantidad5 = localStorage.getItem("cant5");
+				cantidad5 = JSON.parse(cantidad5)
+				document.r1.can5.value	= (''+cantidad5+'')
+				
+				producto6 = localStorage.getItem("prod6");
+				producto6 = JSON.parse(producto6)	
+				document.r1.pro6.value	= (''+producto6+'')
+				
+				precio6 = localStorage.getItem("prec6");
+				precio6	 = JSON.parse(precio6)
+				document.r1.car6.value	= (''+precio6+'')
+				
+				cantidad6 = localStorage.getItem("cant6");
+				cantidad6 = JSON.parse(cantidad6)
+				document.r1.can6.value	= (''+cantidad6+'')
+			
+				
+				if(cantidad > 0){
+			
+				document.write('<center><table width=30% id=tabla1  height=50% border=1 cellpadding=1 cellspacing=1 bordercolor=#0F5227>')
+				document.write('<tr><th>Producto 1</th></tr>')
+				document.write('<tr><th>'+producto+'</th></tr>')
+				document.write('<tr><th>'+precio+'	</th></tr>')
+				document.write('<tr><th>'+cantidad+'</th></tr>')
+				document.write('</table>')
+				}
+				if(document.r1.nom.value.length==0){
+					alert('Por favor digite el nombre')
+					document.r1.nom.focus()
+					return 0
+					}
+					
+				if(document.r1.ape.value.length==0){
+					alert('Por favor digite el apellido')
+					document.r1.ape.focus()
+					return 0
+					}
+				
+				if(document.r1.cel.value.length==0){
+					alert('Por favor digite el cedula')
+					document.r1.cel.focus()
+					return 0
+					}
+					
+				if(document.r1.tel.value.length==0){
+					alert('Por favor digite el telefono')
+					document.r1.tel.focus()
+					return 0
+					}
+//---------------------------------------------------------------------------			
+			
+				
+				//entrada de datos
+				can1 = document.r1.can1.value
+				car1 = document.r1.car1.value
+				can2 = document.r1.can2.value
+				car2 = document.r1.car2.value
+				can3 = document.r1.can3.value
+				car3 = document.r1.car3.value
+				can4 = document.r1.can4.value
+				car4 = document.r1.car4.value
+				
+				//proceso
+				tot1 = car1 * can1
+				tot2 = car2 * can2
+				tot3 = car3 * can3
+				tot4 = car4 * can4
+			
+				//salida de datos
+				document.r1.tot1.value = tot1
+				document.r1.tot2.value = tot2
+				document.r1.tot3.value = tot3
+				document.r1.tot4.value = tot4
+				//---------------------------------------------
+				//subtotal
+				
+				subtot = parseInt(tot1) + parseInt(tot2) + parseInt(tot3) +parseInt(tot4)
+				document.r1.sub.value = subtot
+				
+				//---------------------------------------------
+				//calculo de iva 
+				
+				caliva = subtot * 0.19
+				document.r1.iva.value = caliva
+				
+				
+				//---------------------------------------------
+				//calculo total
+				
+				totfac = subtot + caliva
+				document.r1.fac.value = totfac
+				
+		
+				
+				//---------------------------------------------
+				//calculo de descuentos
+				
+				if(tot1 == 0 && tot2 == 0 && tot3 == 0 && tot4 ==0){
+							alert('por favor ingrese los productos')
+							document.r1.imp.value = ' '
+				}	
+				
+				
+				/*if(tot1 == 0){document.r1.tot1.value = ''}
+				if(tot2 == 0){document.r1.tot2.value = ''}
+				if(tot3 == 0){document.r1.tot3.value = ''}
+				if(tot4 == 0){document.r1.tot4.value = ''}
+				if(sub == 0){document.r1.sub.value = ''}
+				if(iva == 0){document.r1.iva.value = ''}
+				if(fac == 0){document.r1.fac.value = ''}
+			*/
+				
+				
+				if(subtot  >= 50000 && subtot <= 70000){
+					steven0258 = (subtot * 0.01)
+					document.r1.des.value = desc
+					document.r1.por.value = '1%'
+					totdes = totfac - desc
+					document.r1.totdes.value = totdes
+				}
+					else if(subtot >= 70001 && subtot <= 80000){
+						desc = (subtot * 0.02)
+						document.r1.des.value = desc
+						document.r1.por.value = '2%'
+						totdes = totfac - desc
+						document.r1.totdes.value = totdes
+					}
+						else if(subtot  >= 80001 && subtot  <= 90000){
+							desc = (subtot  * 0.03)
+							document.r1.des.value = desc
+							document.r1.por.value = '3%'
+							totdes = totfac - desc
+							document.r1.totdes.value = totdes
+							}
+							else if(subtot  >= 90001 && subtot  <= 100000){
+								desc = (subtot  * 0.04)
+								document.r1.des.value = desc
+								document.r1.por.value = '4%'
+								totdes = totfac - desc
+								document.r1.totdes.value = totdes
+								}
+								else if(subtot  >= 100001){
+									desc = (subtot  * 0.05)
+									document.r1.des.value = desc
+									document.r1.por.value = '5%'
+									totdes = totfac - desc
+									document.r1.totdes.value = totdes
+									}
+									else if(subtot  <= 49999){
+										alert('lo sentimos no aplica descuento')
+										document.r1.des.value = 'no aplica para descuento'
+										document.r1.por.value = '0%'
+										document.r1.totdes.value = 'sin descuento'
+										}
+		
+					
+					
+			//fin function calcular
+	
+			
+			
+			
+						nom = document.r1.nom.value
+						ape = document.r1.ape.value
+						cel = document.r1.cel.value
+						tel = document.r1.tel.value
+						car1 =  document.r1.car1.value
+						pro1 =  document.r1.pro1.value
+						can1 =  document.r1.can1.value
+						tot1 =  document.r1.tot1.value
+						car2 =  document.r1.car2.value
+						pro2 =  document.r1.pro2.value
+						can2 =  document.r1.can2.value
+						tot2 =  document.r1.tot2.value
+						car3 =  document.r1.car3.value
+						pro3 =  document.r1.pro3.value
+						can3 =  document.r1.can3.value
+						tot3 =  document.r1.tot3.value
+						car4 =  document.r1.car4.value
+						pro4 =  document.r1.pro4.value
+						can4 =  document.r1.can4.value
+						tot4 =  document.r1.tot4.value
+						car5 =  document.r1.car5.value
+						pro5 =  document.r1.pro5.value
+						can5 =  document.r1.can5.value
+						tot5 =  document.r1.tot5.value
+						car6 =  document.r1.car6.value
+						pro6 =  document.r1.pro6.value
+						can6 =  document.r1.can6.value
+						tot6 =  document.r1.tot6.value
+						sub = document.r1.sub.value
+						iva = document.r1.iva.value
+						fac = document.r1.fac.value
+						des = document.r1.des.value
+						por = document.r1.por.value
+						totdes = document.r1.totdes.value
+						
+						document.r1.imp.value = ('Tienda a ver si ahorra \n-------------------\n'+nom+' '+ape+' \ncedula: '+cel+' \ntelefono: '+tel+'\n----------------------\n'+pro1+'--valor--'+car1+' x '+can1+' = '+tot1+'\n'+pro2+'--valor--'+car2+' x '+can2+' = '+tot2+'\n'+pro3+'--valor--'+car3+' x '+can3+' = '+tot3+'\n'+pro4+'--valor--'+car4+' x '+can4+' = '+tot4+'\n'+pro5+'--valor--'+car5+' x '+can5+' = '+tot5+'\n'+pro6+'--valor--'+car6+' x '+can6+' = '+tot6+'\n-------------------\nsubtotal: '+sub+'\niva: '+iva+'\ntotal factura: '+fac+'\ndescuentos: '+des+'\nporcentaje: '+por+'\n-------------------\ntotal con descuentos: '+totdes+'')
+						
+						
+						if(tot1 == 0 && tot2 == 0 && tot3 == 0 && tot4 ==0 && tot5 ==0 && tot6 ==0){
+							swal('Por favor ingrese los productos')
+							document.r1.imp.value = ' '
+							
+						}
+
+							else if(tot2 == 0 && tot3 == 0 && tot4 == 0){
+								document.r1.imp.value = ('Tienda a ver si ahorra \n-------------------\n'+nom+' '+ape+' \ncedula: '+cel+' \ntelefono: '+tel+'\n-------------------\n'+pro1+'--valor--'+car1+' x '+can1+' = '+tot1+'\n-------------------\nsubtotal: '+sub+'\niva: '+iva+'\ntotal factura: '+fac+'\n-------------------\ndescuentos: '+des+'\nporcentaje: '+por+'\n-------------------\ntotal con descuentos: '+totdes+'')
+								swal('GRACIAS POR SU COMPRA\nTotal Compra: $'+totdes, 'Su pedido llegará lo antes posible','success' )
+								}
+
+									else if(tot3 == 0 && tot4 == 0){
+										document.r1.imp.value = ('Tienda a ver si ahorra \n-------------------\n'+nom+' '+ape+' \ncedula: '+cel+' \ntelefono: '+tel+'\n-------------------\n'+pro1+'--valor--'+car1+' x '+can1+' = '+tot1+'\n'+pro2+'--valor--'+car2+' x '+can2+' = '+tot2+' \n-------------------\nsubtotal: '+sub+'\niva: '+iva+'\ntotal factura: '+fac+'\ndescuentos: '+des+'\nporcentaje: '+por+'\n-------------------\ntotal con descuentos: '+totdes+'')
+										swal('GRACIAS POR SU COMPRA\nTotal Compra: $'+totdes, 'Su pedido llegará lo antes posible','success' )
+										}
+											else if(tot4 == 0){
+												document.r1.imp.value = ('Tienda a ver si ahorra \n-------------------\n'+nom+' '+ape+' \ncedula: '+cel+' \ntelefono: '+tel+'\n-------------------\n'+pro1+'--valor--'+car1+' x '+can1+' = '+tot1+'\n'+pro2+'--valor--'+car2+' x '+can2+' = '+tot2+'\n'+pro3+'--valor--'+car3+' x '+can3+' = '+tot3+'\n-------------------\nsubtotal: '+sub+'\niva: '+iva+'\ntotal factura: '+fac+'\ndescuentos: '+des+'\nporcentaje: '+por+'\n-------------------\ntotal con descuentos: '+totdes+'')
+												swal('GRACIAS POR SU COMPRA\nTotal Compra: $'+totdes, 'Su pedido llegará lo antes posible','success' )
+											}
+					
+					}//fin function imprimir
+					
+			
+		</script>
+		
+		<body bgcolor=#DDB96> 
+		<form name=r1>
+			<center>
+			<table class="publicidad" width="100%" cellspacing="0" border="0">
+				<br><font face="arial" size="2" color="#"><b>PUBLICIDAD</font>
+				<tr class="margen">
+					<td><a href="GreenHome.html"><img class="logo" src="image/logo.png" width="200px" height="170px"></a>
+						<img src="image/publicidadOK1.jpeg" width="801.5px" height="160px">
+						<input class="carro" type="button" name="carro" value="$0&nbsp&nbsp&nbsp&nbsp 🛒">
+						<a href="Registro.html"><h2 class="registro">Acceder / Registrarse</h2>
+					</td>		
+				</tr>
+			</table>
+
+			
+			<table class="factura" width=80% height=90% border=1 cellpadding=0 cellspacing=1 bordercolor=#0F5227 class=tab>
+			
+			<tr bgcolor=#0F5227 >
+				<th class="factura" colspan=4 height="45"><h1><font face="'Poppins', sans-serif" color="#fff" size="5">COTIZACIÓN DE FACTURA</h1></th>
+				
+			</th>
+			
+			
+			
+			<tr bgcolor=#C0FFDB>
+			<th height="60"><font face="'Poppins', sans-serif" color="#000" size="3">Nombres<br><input class="in" type=text name=nom></th>
+			<th ><font face="'Poppins', sans-serif" color="#000" size="3">Apellidos<br><input class="in" type=text name=ape></th>
+			<th><font face="'Poppins', sans-serif" color="#000" size="3">Cédula<br><input class="in" type=text maxlength="10" name=cel size="8"></th>
+			<th><font face="'Poppins', sans-serif" color="#000" size="3">Teléfono<br><input class="in" type=text maxlength="10" name=tel size="8"></th>
+			</tr>
+			
+			<tr bgcolor=#C0FFDB>
+			<th height="40"><font face="'Poppins', sans-serif" color="#000" size="3">Producto</th>
+			<th><font face="'Poppins', sans-serif" color="#000" size="3">Valor (COP)</th>
+			<th><font face="'Poppins', sans-serif" color="#000" size="3">Cantidad</th>
+			<th><font face="'Poppins', sans-serif" color="#000" size="3">Total</th>
+			</tr>
+			
+			
+		
+			
+			<tr bgcolor=#0F5227>
+				<th class="factura" colspan=2 rowspan=6>
+					<textarea cols=62 rows=16 readonly placeholder="Verifica tu Factura..." name=imp></textarea>
+				</th>
+				<th bgcolor="#C0FFDB"><font face="'Poppins', sans-serif" color="#000" size="3">Subtotal</th>
+				<th bgcolor="#C0FFDB"><input class="in" type=text name=sub size="8"></th>
+			</tr>
+			
+			
+			<tr bgcolor=#C0FFDB>
+				<th><font face="'Poppins', sans-serif" color="#000" size="3">Iva</th>
+				<th><input class="in" type=text name=iva size="8"></th>
+			
+			</tr>
+			
+			<tr bgcolor=#C0FFDB>
+				<th><font face="'Poppins', sans-serif" color="#000" size="3">Total Factura</th>
+				<th><input class="in" type=text name=fac size="8"></th>
+			
+			</tr>
+			
+			<tr bgcolor=#C0FFDB>
+				<th><font face="'Poppins', sans-serif" color="#000" size="3">Descuentos</th>
+				<th><input class="in" type=text name=des size=8>
+					<input class="in" type=text name=por size=2>
+				</th>
+			
+			</tr>
+			
+			<tr bgcolor=#C0FFDB>	
+				<th ><font face="'Poppins', sans-serif" color="#000" size="3">Total factura con descuento</th>
+				<th><input class="in" type=text name=totdes size="8"></th>
+			</tr>
+
+			
+			<tr bgcolor=#0F5227>
+				<th class="factura" colspan=4>
+				<input type=button class="in4" name=res value=" Limpiar Cotización "size="13">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+				<input type=button class="in4" name=cal value=" Imprimir factura " size="11" onclick=imprimir()>
+				</th>
+			</tr>
+			
+		</form>
+		</table><br><br>
+		</body>
+</html>	
